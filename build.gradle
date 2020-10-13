@@ -1,0 +1,36 @@
+group 'com.jingyou'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// 任务
+task hello{
+    doLast {
+        println 'Hello world'
+    }
+}
+
+task hello1 << {
+    println 'Hello world 1'
+}
+
+// 在 gradle 任务中采用 groovy
+task upper << {
+    String someString = 'mY_nAmE'
+    println 'Original:' + someString
+    println 'Upper case: ' + someString.toUpperCase()
+}
+
+task count << {
+    4.times { print '$it '}
+}
