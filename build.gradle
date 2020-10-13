@@ -40,3 +40,25 @@ task count << {
 task intro(dependsOn: hello) <<{
     println "i'm gradle"
 }
+
+
+// Gradle 命令行的基本使用
+task compile << {
+    println 'compiling source'
+}
+
+task compileTest(dependsOn: compile) << {
+    println 'compiling unit tests'
+}
+
+task test1(dependsOn: [compile, compileTest]) << {
+    println 'running unit tests'
+}
+
+task dist(dependsOn: [compile, test1]) << {
+    println 'building the distribution'
+}
+
+
+println name
+println project.path
