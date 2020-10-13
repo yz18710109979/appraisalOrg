@@ -34,3 +34,9 @@ task upper << {
 task count << {
     4.times { print '$it '}
 }
+
+
+// 任务依赖
+task intro(dependsOn: hello) <<{
+    println "i'm gradle"
+}
