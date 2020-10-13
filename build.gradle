@@ -28,8 +28,8 @@ apply plugin: "org.springframework.boot"
 // 使用spring boot的自动依赖管理
 apply plugin: 'io.spring.dependency-management'
 
-apply plugin: 'application' //可选(可自动生成shell启动脚本)
-mainClassName = 'App' //可选（与上行的application插件配套出现）
+// apply plugin: 'application' //可选(可自动生成shell启动脚本)
+// mainClassName = 'App' //可选（与上行的application插件配套出现）
 
 
 //这里是关键（把java与scala的源代码目录全映射到scala上,
@@ -69,7 +69,7 @@ repositories {
 
 //可选（项目初始化时,可用gradle cDirs生成scala及java的src目录）
 
-task "createDirs" << {
+task createDirs << {
     sourceSets*.scala.srcDirs*.each { it.mkdirs() }
     sourceSets*.java.srcDirs*.each { it.mkdirs() }
     sourceSets*.resources.srcDirs*.each { it.mkdirs() }
@@ -89,7 +89,6 @@ dependencies {
 }
 
 //可选,如果想让生成的jar可直接运行,建议加上
-
 jar {
     manifest {
         attributes 'Main-Class': 'App'
