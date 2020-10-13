@@ -33,7 +33,6 @@ apply plugin: 'io.spring.dependency-management'
 
 
 //这里是关键（把java与scala的源代码目录全映射到scala上,
-
 // 这样gradle compileScala时就能同时编译java与scala的源代码）
 
 sourceSets {
@@ -69,11 +68,11 @@ repositories {
 
 //可选（项目初始化时,可用gradle cDirs生成scala及java的src目录）
 
-task createDirs << {
-    sourceSets*.scala.srcDirs*.each { it.mkdirs() }
-    sourceSets*.java.srcDirs*.each { it.mkdirs() }
-    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
-}
+//task createDirs << {
+//    sourceSets*.scala.srcDirs*.each { it.mkdirs() }
+//    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+//    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+//}
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -90,12 +89,14 @@ dependencies {
 
 //可选,如果想让生成的jar可直接运行,建议加上
 jar {
+    baseName = 'gradeAppraisal'
+    version = "0.1"
     manifest {
-        attributes 'Main-Class': 'App'
+        attributes 'Main-Class': 'com.jingyou.App'
     }
 }
 //创建初始目录：gradle cDirs (注：这是缩写方式，与gradle createDirs完全相同)
 //编译： gradle compileScala
 //生成jar包： gradle jar
 //生成带启动脚本的可运行包： gradle installDist
-//////////////////////////////////
+
