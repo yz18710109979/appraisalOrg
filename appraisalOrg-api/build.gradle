@@ -3,4 +3,5 @@ bootJar.enabled = true
 
 dependencies {
     implementation project(':appraisalOrg-Core')
+    compile 'org.apache.cxf:cxf-spring-boot-starter-jaxws:3.2.6' //引入cxf框架
 }

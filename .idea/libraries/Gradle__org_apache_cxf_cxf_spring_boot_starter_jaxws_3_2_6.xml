@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-spring-boot-starter-jaxws:3.2.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-spring-boot-starter-jaxws/3.2.6/bd328539051ea9f85b7d37c5b0ad840eb98f2c62/cxf-spring-boot-starter-jaxws-3.2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-spring-boot-starter-jaxws/3.2.6/b132be85f6f14bdf671246346cc7d86fd1d7a48e/cxf-spring-boot-starter-jaxws-3.2.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
