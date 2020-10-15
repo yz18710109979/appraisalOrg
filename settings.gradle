@@ -1,0 +1,3 @@
+rootProject.name = 'appraisalOrg'
+include 'appraisalOrg-Core', 'appraisalOrg-api'
+

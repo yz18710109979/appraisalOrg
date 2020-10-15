@@ -1,0 +1,6 @@
+jar.enabled = true
+bootJar.enabled = true
+
+dependencies {
+    implementation project(':appraisalOrg-Core')
+}
