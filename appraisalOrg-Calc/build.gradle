@@ -1,0 +1,12 @@
+jar.enabled = true
+bootJar.enabled = false
+dependencies {
+    implementation project(':appraisalOrg-Core')
+    implementation 'org.scala-lang:scala-library:2.11.8'
+
+    //saprk dependencies
+    implementation 'org.apache.spark:spark-core_2.11:2.4.0'
+
+    testImplementation 'org.scalatest:scalatest_2.11:3.0.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
